@@ -1,0 +1,28 @@
+<assembly>
+  <id>liquibase</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <useDefaultExcludes>true</useDefaultExcludes>
+      <directory>src/main/database/changelog</directory>
+    </fileSet>
+    <fileSet>
+      <useDefaultExcludes>true</useDefaultExcludes>
+      <directory>src/main/database/data</directory>
+    </fileSet>
+    <fileSet>
+      <useDefaultExcludes>true</useDefaultExcludes>
+      <directory>src/main/database/sql</directory>
+    </fileSet>
+    <fileSet>
+      <useDefaultExcludes>true</useDefaultExcludes>
+      <directory>src/main/database/</directory>
+      <includes>
+        <include>liquibase.xml</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</assembly>

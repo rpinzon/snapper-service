@@ -1,0 +1,14 @@
+<assembly>
+  <id>datasource</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <files>
+    <file>
+      <source>src/main/datasource/datasource.properties</source>
+      <lineEnding>keep</lineEnding>
+      <filtered>true</filtered>
+    </file>
+  </files>
+</assembly>
