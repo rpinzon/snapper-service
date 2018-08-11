@@ -21,7 +21,7 @@ public class DataController {
         this.repository = repository;
     }
 
-    @RequestMapping(value = "/snapper/persist", method = RequestMethod.POST)
+    @RequestMapping(value = "/snapper/post", method = RequestMethod.POST)
     public void persist(@RequestBody Data data) {
         repository.save(data);
     }
