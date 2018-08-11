@@ -5,3 +5,5 @@
 `mvn liquibase:update`
 
 - Configuration used to connect to database are kept in `liquibase.properties` file
+
+:exclamation: You don't need to run this step manually.. It will execute during application startup
