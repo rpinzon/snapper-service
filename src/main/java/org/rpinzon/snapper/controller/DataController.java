@@ -1,6 +1,8 @@
 package org.rpinzon.snapper.controller;
 
 import org.rpinzon.snapper.model.Data;
+import org.rpinzon.snapper.repository.DataRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,9 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DataController {
 
-    @RequestMapping(value = "/snapper", method = RequestMethod.POST)
+    private final DataRepository repository;
+
+    @Autowired
+    public DataController(DataRepository repository) {
+        this.repository = repository;
+    }
+
+    @RequestMapping(value = "/snapper/persist", method = RequestMethod.POST)
     public void persist(@RequestBody Data data) {
-        System.out.println(data);
+        repository.save(data);
     }
 
 }
