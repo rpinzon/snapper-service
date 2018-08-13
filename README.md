@@ -7,3 +7,12 @@
 - Configuration used to connect to database are kept in `liquibase.properties` file
 
 :exclamation: You don't need to run this step manually.. It will execute during application startup
+
+##### Creates image for application service using maven-docker-plugin
+`mvn package dockerfile:build`
+
+##### Push image to Docker Hub using maven-docker-plugin (sudo might be required)
+`mvn dockerfile:push`
+
+##### Runs a Docker container that contains snapper service linking the database
+`docker run -p 8080:8080 --link postgres-psql:postgres-psql --net snapper-service_default rpinzon/snapper-service:0.1.0-SNAPSHOT` 
