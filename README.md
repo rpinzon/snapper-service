@@ -8,7 +8,7 @@
 
 :exclamation: You don't need to run this step manually.. It will execute during application startup
 
-##### Creates image for application service using maven-docker-plugin
+##### Creates image for application service using dockerfile-maven-plugin
 `mvn package dockerfile:build`
 
 ##### Runs a Docker container that contains snapper service linking the database
